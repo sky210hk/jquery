@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 제이쿼리 -->
+    <!-- <script src="js/jquery-3.6.0.min.js"></script> -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+<body>
+    
+    <div class="test"></div>
+
+    <div class="test2"></div>
+
+    <script>
+        //HTML형태로 삽입하기 html()
+
+        //JS에서는???
+        //document.querySelector(".test").innerHTML = "<a href='#'>kkk</a>";
+
+        //a태그 넣기
+        $(".test").html("<a href='#'>kkk</a>");
+
+        //삭제하기(공백을 넣으면 됌)
+        $(".test").html("");
+
+        //문자 넣기
+        $(".test").html("홍길동");
+
+        //값을 얻어오기
+        var a = $(".test").html();
+        console.log(a);
+
+        //text() : 순수 문자열의 형태로 삽입하는 기능
+        //JS에서는?? 태그형식으로 썼지만 순수 문자열의 형태로 삽입 됨.
+        //document.querySelector(".test2").textContent = "<h2>순수문자열로 삽입</h2>";
+
+        //jquery에서는??
+        $(".test2").text("<h2>순수문자열로 삽입</h2>");
+
+
+    </script>
+
+
+
+</body>
+</html>

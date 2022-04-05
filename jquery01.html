@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 제이쿼리 -->
+    <!-- <script src="js/jquery-3.6.0.min.js"></script> -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+<body>
+
+    <input type="text" id="apple" value="홍길동">
+    <input type="text" class="melon" value="이순신">
+    <input type="hidden" value="신사임당">
+    
+    <script>
+        /*
+        제이쿼리는 $("선택자") 로 요소를 선택합니다. 반환으로 제이쿼리 객체를 돌려줍니다.
+        $("선택자")[인덱스] 로 순수 태그를 취득할 수 있으며.
+        $("선택자").제이쿼리함수() 형태로 사용하게 됩니다.
+        */ 
+        var a = document.getElementById("apple");
+        console.log(a); //js코드를 사용할 수 있다.
+
+        var a2 = $("#apple");
+        console.log(a2); //fn.init이라는 객체를 돌려줌(jquery의 함수를 모아 논 곳)
+
+        var a3 = $("#apple")[0];
+        console.log(a3); //그 중 0번째를 불러오면 태그를 불러올 수 있음.
+        
+        console.log("--------------------------------------------------------------------")
+
+        var b = document.querySelector(".melon"); //JS로 값을 얻는 경우
+        console.log(b.value);
+
+        var b2 = $(".melon").val(); //jquery문법으로 값을 얻는 경우
+        console.log(b2);
+
+        var b3 = $("input[type='hidden']").val();
+        console.log(b3)
+
+        console.log("--------------------------------------------------------------------")
+
+    </script>
+
+    
+    
+</body>
+</html>
